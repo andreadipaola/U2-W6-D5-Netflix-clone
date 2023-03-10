@@ -1,0 +1,21 @@
+@import "../functions";
+
+// $purple: #754ffe;
+// $green: #19cb98;
+// $peach: #ffeeda;
+
+// $dropdown-border-radius: 0;
+// $dropdown-border-width: 0;
+
+// $custom-colors: (
+//   "purple": $purple,
+//   "peach": $peach,
+//   "green": $green,
+//   "white": white
+// );
+@import "../variables";
+@import "../mixins";
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+@import "../maps";
+
+@import "../bootstrap";
