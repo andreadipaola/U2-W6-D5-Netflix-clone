@@ -1,38 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone by Andrea Di Paola</title>
-    <link rel="stylesheet" href="assets/dist/css/style.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/dist/css/style.min.css" />
+  </head>
+  <body data-bs-theme="dark">
+    <!-- NAVBAR SECTION START -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar w/ text</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        Navbar text with an inline element
-      </span>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            id="logo"
+            class="img-fluid"
+            src="assets/img/netflix_logo.png"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">TV Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My List</a>
+            </li>
+          </ul>
+          <span class="navbar-text me-3">
+            <i class="bi bi-search"></i>
+          </span>
+          <span class="navbar-text me-3"> KIDS </span>
+
+          <!-- USER AREA START -->
+          <div class="bell-icon me-3">
+            <i class="bi bi-bell-fill"></i>
+          </div>
+          <div class="avatar-icon dropdown">
+            <div
+              class="dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <div
+                class="avatar-dropdown dropdown-menu dropdown-menu-end border-0 shadow py-3"
+                aria-label="User Account"
+              >
+                <div
+                  class="d-flex align-items-center px-3 pb-1"
+                  style="gap: 6px"
+                >
+                  <div class="avatar-icon img-rounded mme-2"></div>
+                  <div class="avatar-menu-header">
+                    <p class="font-sm mb-0">Andrea Di Paola</p>
+                    <p class="font-sm mb-0 text-muted">
+                      andr3a.dipaola@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item px-3" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-user"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span class="ms-2">Profile</span></a
+                >
+                <a class="dropdown-item px-3" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    ></polygon>
+                  </svg>
+                  <span class="ms-2">Subscription</span></a
+                >
+                <a class="dropdown-item px-3" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-settings"
+                  >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    ></path>
+                  </svg>
+                  <span class="ms-2">Settings</span></a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item px-3" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-power"
+                  >
+                    <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                    <line x1="12" y1="2" x2="12" y2="12"></line>
+                  </svg>
+                  <span class="ms-2">Sign Out</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- USER AREA END -->
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR SECTION END -->
+
+    <!-- CONTROLS BAR START -->
+    <div class="container bg-body-tertiary mb-4">
+      <div class="row d-flex justify-content-between py-3">
+        <div class="col-4 d-flex align-items-center">
+          <h2 class="me-4">TV Shows</h2>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Generes
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Adventures</a></li>
+              <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1 d-flex">
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic outlined example"
+          >
+            <button type="button" class="btn btn-outline-secondary">
+              <i class="bi bi-list-ul"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              <i class="bi bi-grid"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+    <!-- CONTROLS BAR END -->
+
+    <!-- TRENDING SECTION START -->
+    <div class="container mb-5">
+      <h3>Reccomanded to you</h3>
+      <!-- CAROUSEL START -->
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6">
+              <div class="col">
+                <img src="assets/media/media0.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media1.jpg" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media2.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media3.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media4.jpg" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media5.webp" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6">
+              <div class="col">
+                <img src="assets/media/media0.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media1.jpg" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media2.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media3.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media4.jpg" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/media/media5.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- CAROUSEL END -->
+    </div>
+    <!-- TRENDING SECTION END -->
+
+    <!-- WATCH IT AGAIN SECTION START -->
+    <div class="container mb-5">
+        <h3>Reccomanded to you</h3>
+        <!-- CAROUSEL START -->
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6">
+                <div class="col">
+                  <img src="assets/media/media0.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media1.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media2.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media3.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media4.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media5.webp" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6">
+                <div class="col">
+                  <img src="assets/media/media0.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media1.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media2.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media3.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media4.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media5.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- CAROUSEL END -->
+      </div>
+      <!-- WATCH IT AGAIN SECTION END -->
+
+      <!-- NEW RELEASES SECTION END START -->
+    <div class="container mb-5">
+        <h3>Reccomanded to you</h3>
+        <!-- CAROUSEL START -->
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6">
+                <div class="col">
+                  <img src="assets/media/media0.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media1.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media2.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media3.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media4.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media5.webp" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6">
+                <div class="col">
+                  <img src="assets/media/media0.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media1.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media2.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media3.webp" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media4.jpg" alt="" />
+                </div>
+                <div class="col">
+                  <img src="assets/media/media5.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- CAROUSEL END -->
+      </div>
+      <!-- NEW RELEASES SECTION END -->
+
+      <!-- FOOTER START -->
+      <div class="container">
+        <div class="row row-cols-6 d-flex justify-content-center">
+            <div class="col d-flex flex-column">
+                <div></div>
+                <div class="col row-cols-1 d-flex" d-flex>
+                    <span>Audio and Subtitles</span>
+                    <span>Media Center</span>
+                    <span>Privacy</span>
+                    <span>Contact Us</span>
+                    <span>Audio Description</span>
+                    <span>Investor Relations</span>
+                    <span>Legal Notices</span>
+                    <span>Help Center</span>
+                    <span>Jobs</span>
+                    <span>Gift Cards</span>
+                    <span>Terms of Use</span>
+                    <span>Corporate Informations</span>
+                    <span>Audio and Subtitles</span>
+
+
+                </div>
+                <div><button class="btn btn-outline-secondary">Service Code</button></div> 
+                <div>&copy; 1997-2023 Netflix, Inc {i-0d00fcda2fdf9c0de}</div>
+            </div>
+        </div>
+      </div>
+      <!-- FOOTER END -->
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

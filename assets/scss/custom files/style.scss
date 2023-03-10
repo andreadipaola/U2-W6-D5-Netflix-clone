@@ -1,4 +1,35 @@
 @import "overrides";
-// h1 {
-//     color: red;
-// }
+
+#logo {
+    height: 35px;
+}
+
+.navbar {
+    .dropdown {
+      .dropdown-menu {
+        .dropdown-item {
+          font-size: 14px;
+        }
+        &.avatar-dropdown {
+          .dropdown-item {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+.avatar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+.avatar-icon {
+    background-image: url(../../img/avatar.png);
+    background-size: cover;
+  }
