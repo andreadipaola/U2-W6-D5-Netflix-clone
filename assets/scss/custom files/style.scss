@@ -1,35 +1,60 @@
 @import "overrides";
 
-#logo {
-    height: 35px;
+* {
+  border-radius: 0 !important;
 }
 
-.navbar {
-    .dropdown {
-      .dropdown-menu {
-        .dropdown-item {
-          font-size: 14px;
+#logo {
+  height: 35px;
+}
+
+#control-bar {
+    .btn-group {
+        button {
+            margin-block: 15px !important;
+            line-height: 0 !important;
         }
-        &.avatar-dropdown {
-          .dropdown-item {
-            padding-left: 0;
-            padding-right: 0;
-          }
+    }
+}
+.navbar {
+  .dropdown {
+    .dropdown-menu {
+      .dropdown-item {
+        font-size: 14px;
+      }
+      &.avatar-dropdown {
+        .dropdown-item {
+          padding-left: 0;
+          padding-right: 0;
         }
       }
     }
   }
+}
 
 .avatar-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
 
 .avatar-icon {
-    background-image: url(../../img/avatar.png);
-    background-size: cover;
+  background-image: url(../../img/avatar.png);
+  background-size: cover;
+}
+
+
+
+
+#footer {
+  font-size: 14px;
+  i {
+    font-size: 22px;
   }
+  button {
+    font-size: 14px;
+  }
+}
