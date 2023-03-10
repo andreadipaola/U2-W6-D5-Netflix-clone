@@ -13,7 +13,7 @@
   </head>
   <body data-bs-theme="dark">
     <!-- NAVBAR SECTION START -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg mb-5">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
@@ -28,20 +28,20 @@
     <!-- NAVBAR SECTION END -->
 
     <!-- MAIN SECTION START -->
-    <div class="container">
-      <div class="row">
-        <div class="col">
+    <div id="profile-form" class="container d-flex justify-content-center">
+      <div class="row d-flex justify-content-center">
+        <div class="col-10">
 
-          <h1 class="display-4">Edit Profile</h1>
+          <h1 class="display-4 border-bottom mb-4">Edit Profile</h1>
           
-          <div class="row">
-            <div class="col">
-                <img class="img-fluid w-25" src="assets/img/avatar.png" alt="">
+          <div class="row pb-2 border-bottom">
+            <div class="col col-3">
+                <img class="img-fluid w-100" src="assets/img/avatar.png" alt="">
             </div>
-            <div class="col">
-                <p class="bg-secondary p-2 mb-3">Strive Students</p>
-                <p>Language:</p>
-                <div class="dropdown">
+            <div class="col col-9">
+                <p class="bg-secondary px-3 py-1 mb-4 me-5 fs-5">Strive Student</p>
+                <p class="mb-1">Language:</p>
+                <div class="dropdown mb-4">
                     <button
                       class="btn btn-outline-secondary dropdown-toggle"
                       type="button"
@@ -56,12 +56,19 @@
                       <li><a class="dropdown-item" href="#">Spanish</a></li>
                     </ul>
                   </div>
-                  <p>maturity Settings:</p>
-                  <p class="bg-secondary ">ALL MATURITY RATINGS</p>
+                  <p class="pt-3 border-top">Maturity Settings:</p>
+                  <p class="bg-secondary px-3 py-1 d-inline-block">ALL MATURITY RATINGS</p>
                   <p>Show titles of all maturity ratings for this profile.</p>
-                  <button class="btn btn-outline-secondary">EDIT</button>
-                  <p>Autoplay controls</p>
-                  <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                  <button class="btn btn-outline-secondary mb-4">EDIT</button>
+                  <p class="border-top pt-3 mb-1">Autoplay controls</p>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Autoplay next episode in a series on all devices.</label>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                    <label class="form-check-label" for="exampleCheck2">Autoplay previews while browsing on all devices.</label>
+                  </div>
                   
 
             
@@ -69,8 +76,8 @@
             </div>
           </div>
 
-          <div class="row d-flex">
-            <div class="col">
+          <div class="row d-flex justify-content-center">
+            <div class="col mx-0 px-0 pt-4">
               <button class="btn btn-secondary me-3">SAVE</button>
               <button class="btn btn-outline-secondary me-3">CANCEL</button>
               <button class="btn btn-outline-secondary">DELETE PROFILE</button>

@@ -58,3 +58,10 @@
     font-size: 14px;
   }
 }
+
+
+#profile-form {
+  button:not(.dropdown-toggle) {
+    letter-spacing: 3px;
+  }
+}

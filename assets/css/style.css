@@ -14822,4 +14822,8 @@ textarea.form-control-lg {
 }
 #footer button {
   font-size: 14px;
+}
+
+#profile-form button:not(.dropdown-toggle) {
+  letter-spacing: 3px;
 }/*# sourceMappingURL=style.css.map */
