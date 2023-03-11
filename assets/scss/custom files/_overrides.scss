@@ -11,7 +11,9 @@
 // );
 @import "../variables";
 
-$body-bg-dark: #181818;
+$enable-rounded: false;
+
+$body-bg-dark: #141414;
 
 $custom-spacers: (
   6: $spacer * 3.5,
@@ -21,15 +23,8 @@ $custom-spacers: (
   10: $spacer * 5.5,
   11: $spacer * 6,
   12: $spacer * 6.5,
-  13: $spacer * 7
+  13: $spacer * 7,
 );
-
-$border-radius: 0;
-$border-radius-sm: 0;
-$border-radius-lg: 0;
-$border-radius-xl: 0;
-$border-radius-2xl: 0;
-$border-radius-pill: 0;
 
 $h1-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.25;
@@ -38,5 +33,22 @@ $h3-font-size: $font-size-base * 1.25;
 // $theme-colors: map-merge($theme-colors, $custom-colors);
 $spacers: map-merge($spacers, $custom-spacers);
 @import "../maps";
+
+@import "../utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width-2": (
+      property: width,
+      class: wd,
+      values: (
+        32: 32px,
+        35: 35px,
+        40: 40px
+      )
+    )
+  )
+);
 
 @import "../bootstrap";
