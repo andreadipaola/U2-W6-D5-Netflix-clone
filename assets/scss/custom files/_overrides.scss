@@ -1,20 +1,40 @@
 @import "../functions";
-
-// $purple: #754ffe;
-// $green: #19cb98;
-// $peach: #ffeeda;
-
-// $custom-colors: (
-//   "purple": $purple,
-//   "peach": $peach,
-//   "green": $green
-// );
 @import "../variables";
 
+// DISABILITA IL BORDER RADIUS NEI COMPONENTI
 $enable-rounded: false;
 
+// CENTRA IL CURSORE LATERALE (CARET) NEL DROPDOWN
+// $caret-vertical-align: $caret-width * 0;
+
+// MODIFICA IL BACKGROUND DI DEFAULT
+$white: #ededed;
+
+$custom-colors: (
+  "white": $white
+);
+
+$body-color-dark: #ededed;
 $body-bg-dark: #141414;
 
+.btn-outline-secondary {
+  --bs-btn-color: #6c757d;
+  --bs-btn-border-color: #6c757d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6c757d;
+  --bs-btn-hover-border-color: #6c757d;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6c757d;
+  --bs-btn-active-border-color: #6c757d;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #6c757d;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #6c757d;
+  --bs-gradient: none;
+}
+
+// AGGIUNGE ULTERIORI SPACERS
 $custom-spacers: (
   6: $spacer * 3.5,
   7: $spacer * 4,
@@ -26,23 +46,42 @@ $custom-spacers: (
   13: $spacer * 7,
 );
 
+// MODIFICA I FONT-SIZE DI DEFAULT DI ALCUNI TAG
 $h1-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.25;
 
 @import "../mixins";
-// $theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+// FA IL MARGE TRA GLI SPACERS DI DAFAULT E QUELLI CUSTOM 
 $spacers: map-merge($spacers, $custom-spacers);
 @import "../maps";
 
 @import "../utilities";
+// AGGIUNGE ULTERIORI PROPRIETÀ CON VALORI CUSTOM
+$utilities: map-merge(
+  $utilities,
+  (
+    "px-width": (
+      property: width,
+      class: wd,
+      values: (
+        32: 32px,
+        35: 35px,
+        40: 40px
+      )
+    )
+  )
+);
 
 $utilities: map-merge(
   $utilities,
   (
-    "width-2": (
-      property: width,
-      class: wd,
+    "px-height": (
+      property: height,
+      class: ht,
       values: (
+        15: 15px,
+        20: 20px,
         32: 32px,
         35: 35px,
         40: 40px

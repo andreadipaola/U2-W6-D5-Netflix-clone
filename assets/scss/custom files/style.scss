@@ -1,12 +1,9 @@
 @import "overrides";
-// * {
-//   border-collapse: collapse;
-// }
-
-#logo {
-  height: 35px;
+nav {
+  .dropdown-toggle::after {
+    vertical-align: 0;
+  }
 }
-
 #control-bar {
     .btn-group {
         button {
@@ -24,11 +21,14 @@
 
 #footer {
   font-size: 14px;
+  color: $gray-600;
   i {
     font-size: 22px;
   }
   button {
     font-size: 14px;
+    color: $gray-600;
+    border-color: $gray-600;
   }
 }
 
