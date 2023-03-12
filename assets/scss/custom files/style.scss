@@ -1,23 +1,17 @@
 @import "overrides";
+
 nav {
   .dropdown-toggle::after {
     vertical-align: 0;
   }
 }
 #control-bar {
-    .btn-group {
-        button {
-            margin-block: 15px !important;
-            line-height: 0 !important;
-        }
+  .btn-group {
+    button {
+      height: 38px;
     }
+  }
 }
-
-
-
-
-
-
 
 #footer {
   font-size: 14px;
@@ -31,7 +25,6 @@ nav {
     border-color: $gray-600;
   }
 }
-
 
 #profile-form {
   button:not(.dropdown-toggle) {
