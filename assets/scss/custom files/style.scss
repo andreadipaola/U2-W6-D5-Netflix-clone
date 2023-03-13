@@ -1,31 +1,24 @@
 @import "overrides";
 
-nav {
-  .dropdown-toggle::after {
+// INDEX.HTML
+#avatar-btn {
+  &:hover, &:active {
+    background-color: $transparent;
+  }
+  &::after {
     vertical-align: 0;
-  }
-}
-#control-bar {
-  .btn-group {
-    button {
-      height: 38px;
-    }
-  }
+  } 
 }
 
 #footer {
-  font-size: 14px;
   color: $gray-600;
-  i {
-    font-size: 22px;
-  }
   button {
-    font-size: 14px;
     color: $gray-600;
     border-color: $gray-600;
   }
 }
 
+// PROFILE.HTML
 #profile-form {
   button:not(.dropdown-toggle) {
     letter-spacing: 3px;

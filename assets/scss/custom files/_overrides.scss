@@ -1,23 +1,26 @@
 @import "../functions";
 @import "../variables";
 
-// DISABILITA IL BORDER RADIUS NEI COMPONENTI
 $enable-rounded: false;
 
-// CENTRA IL CURSORE LATERALE (CARET) NEL DROPDOWN
 // $caret-vertical-align: $caret-width * 0;
 
-// MODIFICA IL BACKGROUND DI DEFAULT
-$white: #eaeaea;
+$custom-white: #eaeaea;
+$custom-transparent: transparent;
 
 $custom-colors: (
-  "white": $white
+  "custom-white": $custom-white,
+  "custom-grey": $gray-600
 );
 
 $body-color-dark: #eaeaea;
 $body-bg-dark: #141414;
 
-// AGGIUNGE ULTERIORI SPACERS
+$navbar-brand-font-size: 1rem;
+$navbar-brand-margin-end: 2.5rem;
+
+$nav-link-font-size: 14px;
+
 $custom-spacers: (
   6: $spacer * 3.5,
   7: $spacer * 4,
@@ -29,18 +32,39 @@ $custom-spacers: (
   13: $spacer * 7,
 );
 
-// MODIFICA I FONT-SIZE DI DEFAULT DI ALCUNI TAG
 $h1-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.25;
 
 @import "../mixins";
+@mixin button-outline-custom(
+  $color,
+  $color-hover: $custom-white,
+  $active-background: $gray-800,
+  $active-border: $color,
+  $active-color: $custom-white
+) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-border-color: #{$color};
+  --#{$prefix}btn-hover-color: #{$color-hover};
+  --#{$prefix}btn-hover-bg: #{$active-background};
+  --#{$prefix}btn-hover-border-color: #{$active-border};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{$prefix}btn-active-color: #{$active-color};
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-active-border-color: #{$active-border};
+  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: #{$color};
+  --#{$prefix}gradient: none;
+}
 $theme-colors: map-merge($theme-colors, $custom-colors);
-// FA IL MARGE TRA GLI SPACERS DI DAFAULT E QUELLI CUSTOM 
+
 $spacers: map-merge($spacers, $custom-spacers);
 @import "../maps";
 
 @import "../utilities";
-// AGGIUNGE ULTERIORI PROPRIETÀ CON VALORI CUSTOM
+
 $utilities: map-merge(
   $utilities,
   (
@@ -51,8 +75,8 @@ $utilities: map-merge(
         32: 32px,
         35: 35px,
         40: 40px
-      )
-    )
+      ),
+    ),
   )
 );
 
@@ -65,12 +89,52 @@ $utilities: map-merge(
       values: (
         15: 15px,
         20: 20px,
+        25: 25px,
         32: 32px,
         35: 35px,
+        38: 38px,
         40: 40px
-      )
-    )
+      ),
+    ),
   )
 );
 
+$utilities: map-merge(
+  $utilities,
+  (
+    "custom-font-size": (
+      rfs: true,
+      property: font-size,
+      class: pfs,
+      values: (
+        11: 11px,
+        13: 13px,
+        14: 14px,
+        16: 16px,
+        22: 22px,
+        24: 24px      
+      ),
+    ),
+  )
+);
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "custom-vertical-align": (
+//       property: vertical-align,
+//       class: ve,
+//       values: 0
+//     ),
+//   )
+// );
+
+
+
 @import "../bootstrap";
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-custom($value);
+  }
+}
