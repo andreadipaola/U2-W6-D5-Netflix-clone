@@ -10,7 +10,7 @@ $custom-transparent: transparent;
 
 $custom-colors: (
   "custom-white": $custom-white,
-  "custom-grey": $gray-600
+  "custom-gray": $gray-600
 );
 
 $body-color-dark: #eaeaea;
@@ -20,6 +20,11 @@ $navbar-brand-font-size: 1rem;
 $navbar-brand-margin-end: 2.5rem;
 
 $nav-link-font-size: 14px;
+
+$carousel-control-hover-opacity: 1;
+$carousel-control-width: 5%;
+$carousel-dark-control-icon-filter: unset;
+
 
 $custom-spacers: (
   6: $spacer * 3.5,
@@ -138,3 +143,13 @@ $utilities: map-merge(
     @include button-outline-custom($value);
   }
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #000;
+  opacity: .5;
+  &:hover {
+    opacity: .8;
+  }
+}
+

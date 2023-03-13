@@ -3,7 +3,7 @@
 // INDEX.HTML
 #avatar-btn {
   &:hover, &:active {
-    background-color: $transparent;
+    background-color: $custom-transparent;
   }
   &::after {
     vertical-align: 0;
