@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone by Andrea Di Paola</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/dist/css/style.min.css" />
+  </head>
+  <body data-bs-theme="light">
+    <!-- NAVBAR SECTION START -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top text-body bg-body"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <!-- FIRST NAV START -->
+        <div>
+          <a class="navbar-brand" href="#">
+            <img class="ht-20" src="assets/img/netflix_logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TV Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My List</a>
+            </li>
+          </ul>
+        </div>
+        <!-- FIRST NAV END -->
+        <!-- SECOND NAV START -->
+        <div class="d-flex align-items-center pfs-14 ve-0">
+          <span class="me-3">
+            <i class="bi bi-search"></i>
+          </span>
+          <span class="me-3">KIDS</span>
+          <div class="bell-icon me-3">
+            <i class="bi bi-bell-fill"></i>
+          </div>
+          <div class="dropdown">
+            <button
+              id="avatar-btn"
+              class="btn btn-outline-custom-white border-0 dropdown-toggle p-0"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="img-fluid rounded wd-32"
+                src="assets/img/avatar.png"
+                alt=""
+              />
+            </button>
+            <div
+              class="dropdown-menu dropdown-menu-end border-0 border-top shadow mt-3"
+            >
+              <a class="dropdown-item" href="#">
+                <div>
+                  <img
+                    class="img-fluid rounded wd-32 me-2"
+                    src="assets/img/avatar2.png"
+                    alt=""
+                  />
+                  <span class="font-sm mb-0">Anna</span>
+                </div>
+              </a>
+
+              <a class="dropdown-item" href="#">
+                <div>
+                  <img
+                    class="img-fluid rounded wd-32 me-2"
+                    src="assets/img/avatar3.png"
+                    alt=""
+                  />
+                  <span class="font-sm mb-0">Romano</span>
+                </div>
+              </a>
+
+              <a class="dropdown-item" href="#">
+                <div>
+                  <img
+                    class="img-fluid rounded wd-32 me-2"
+                    src="assets/img/avatar4.png"
+                    alt=""
+                  />
+                  <span class="font-sm mb-0">Angelo</span>
+                </div>
+              </a>
+
+              <a class="dropdown-item" href="profile.html">
+                <div>
+                  <i class="bi bi-pencil"></i>
+                  <span class="ms-2">Gestisci i profili</span>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div>
+                  <i class="bi bi-arrow-repeat"></i>
+                  <span class="ms-2">Trasferisci profilo</span>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div>
+                  <i class="bi bi-person"></i>
+                  <span class="ms-2">Account</span>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div>
+                  <i class="bi bi-question-circle"></i>
+                  <span class="ms-2">Centro Assistenza</span>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item p-0" href="#">
+                <div class="text-center">
+                  <span class="px-7">Esci da Netflix</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- SECOND NAV END -->
+      </div>
+    </nav>
+    <!-- NAVBAR SECTION END -->
+    <div class="container mt-9 text-body bg-body" data-bs-theme="light">
+      <div class="row">
+        <div class="col">
+          <h1 class="border-bottom">Account</h1>
+          <div class="border-bottom d-flex">
+            <div class="col">
+              <div>MEMBERSHIP & BILLING</div>
+              <button class="btn btn-outline-custom-white">
+                Cancel Membership
+              </button>
+            </div>
+            <div class="col">
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between">
+                  <span>student@strive.school</span>
+                  <span>Change account email</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Password: ********</span>
+                  <span>Change password</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Phone: 321 044 1279</span>
+                  <span>Change phone number</span>
+                </div>
+              </div>
+              <div class="margin-bottom">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex align-item-center">
+                        <img class="img-fluid ht-20 me-3"src="assets/img/paypal.png" alt="">
+                        <span>admin@strive.school</span>
+                    </div>                
+                    <span>Change account email</span>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <span>Billing Details</span>
+                </div>              
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
