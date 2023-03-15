@@ -10191,6 +10191,14 @@ textarea.form-control-lg {
   height: 105px !important;
 }
 
+.pfs-9 {
+  font-size: 0.5625rem !important;
+}
+
+.pfs-10 {
+  font-size: 0.625rem !important;
+}
+
 .pfs-11 {
   font-size: 0.6875rem !important;
 }
@@ -15480,4 +15488,12 @@ textarea.form-control-lg {
 
 #profile-form button:not(.dropdown-toggle) {
   letter-spacing: 3px;
+}
+
+.round-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
 }/*# sourceMappingURL=style.css.map */
