@@ -11,25 +11,17 @@
   }
 }
 
-// #footer {
-//   color: $gray-600;
-//   button {
-//     color: $gray-600;
-//     border-color: $gray-600;
-//   }
-// }
+.pencil-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+}
 
 // PROFILE.HTML
 #profile-form {
   button:not(.dropdown-toggle) {
     letter-spacing: 3px;
   }
-}
-
-.round-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
 }

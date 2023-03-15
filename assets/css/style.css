@@ -10127,6 +10127,10 @@ textarea.form-control-lg {
   z-index: 3 !important;
 }
 
+.wd-25 {
+  width: 25px !important;
+}
+
 .wd-32 {
   width: 32px !important;
 }
@@ -15486,14 +15490,14 @@ textarea.form-control-lg {
   vertical-align: 0;
 }
 
-#profile-form button:not(.dropdown-toggle) {
-  letter-spacing: 3px;
-}
-
-.round-icon {
+.pencil-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 25px;
   height: 25px;
+}
+
+#profile-form button:not(.dropdown-toggle) {
+  letter-spacing: 3px;
 }/*# sourceMappingURL=style.css.map */
