@@ -33,40 +33,36 @@
     <!-- NAVBAR SECTION END -->
 
     <!-- MAIN SECTION START -->
-    <div
-      id="profile-form"
-      class="container d-flex justify-content-center align-item-center mt-10"
-    >
-      <div class="row d-flex justify-content-center">
-        <div class="col-10">
-          <h1 class="display-4 border-bottom mb-4">Edit Profile</h1>
-
-          <div class="row pb-2 border-bottom">
-            <div class="col col-3">
-              <img
-                class="img-fluid w-100 position-relative"
-                src="assets/img/avatar.png"
-                alt=""
-              />
-              <img
-                height="40px"
-                weight="40px"
-                class="img-rounded position-relative bg-light"
-                src=""
-                alt=""
-              />
+    <div id="profile-form" class="container mt-10" style="width: 490px">
+      <!-- ROW 1-->
+      <div class="row">
+        <div class="col-12 border-bottom px-0">
+          <h1 class="display-4">Edit Profile</h1>
+        </div>
+      </div>
+      <!-- ROW 2-->
+      <div class="row pt-3">
+        <!-- COL 2.1-->
+        <div class="col-12 px-0 d-flex">
+          <!-- COL 2.1.1 -->
+          <div class="pe-4">
+            <div class="position-relative">
+              <img class="rounded ht-105" src="assets/img/avatar.png" alt="" />
               <i
-                class="bi bi-pencil-fill position-absolute bottom-0 start-0"
+                class="wd-20 ht-20 bi bi-pencil-fill img-thumbnail rounded-circle position-absolute bottom-0 start-0 ms-1 mb-1"
               ></i>
             </div>
-            <div class="col col-9">
-              <p class="bg-secondary px-3 py-1 mb-4 me-5 pfs-18">
-                Strive Student
-              </p>
-              <p class="mb-1 pfs-18 text-custom-gray">Language:</p>
-              <div class="dropdown mb-4">
+          </div>
+          <!-- COL 2.1.2 -->
+          <div>
+            <div class="d-flex flex-column align-items-start pe-3">
+              <span class="bg-custom-darkestgray px-3 py-1 col-12 mb-3"
+                >Strive Student</span
+              >
+              <span class="text-custom-gray mb-1">Language:</span>
+              <div class="dropdown">
                 <button
-                  class="btn btn-outline-secondary dropdown-toggle"
+                  class="btn btn-outline-custom-white btn-sm dropdown-toggle mb-3"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -79,50 +75,61 @@
                   <li><a class="dropdown-item" href="#">Spanish</a></li>
                 </ul>
               </div>
-              <p class="pt-3 border-top pfs-18 text-custom-gray">
-                Maturity Settings:
-              </p>
-              <p class="bg-secondary px-3 py-1 d-inline-block">
-                ALL MATURITY RATINGS
-              </p>
-              <p>Show titles of all maturity ratings for this profile.</p>
-              <button class="btn btn-outline-secondary mb-4">EDIT</button>
-              <p class="border-top pt-3 mb-1 pfs-18 text-custom-gray">
-                Autoplay controls
-              </p>
-              <div class="mb-3 form-check">
+            </div>
+
+            <div class="d-flex flex-column align-items-start border-top">
+              <span class="text-custom-gray pt-3 pb-2">Maturity Settings:</span>
+              <span class="bg-custom-ultradarkgray pfs-14 px-2 py-1 mb-2"
+                >ALL MATURITY RATINGS</span
+              >
+              <span class="mb-3 pfs-14"
+                >Show titles of all maturity ratings for this profile.</span
+              >
+              <button class="btn btn-outline-secondary btn-sm px-3 mb-4">
+                EDIT
+              </button>
+            </div>
+
+            <div
+              class="d-flex flex-column align-items-start pt-3 mb-3 border-top"
+            >
+              <span class="text-custom-gray mb-2">Autoplay controls</span>
+              <div class="form-check mb-2">
                 <input
                   type="checkbox"
-                  class="form-check-input"
+                  class="form-check-input me-2"
                   id="exampleCheck1"
+                  checked
                 />
-                <label class="form-check-label pfs-14" for="exampleCheck1"
+                <label class="form-check-label pfs-13" for="exampleCheck1"
                   >Autoplay next episode in a series on all devices.</label
                 >
               </div>
-              <div class="mb-3 form-check">
+              <div class="form-check">
                 <input
                   type="checkbox"
-                  class="form-check-input"
+                  class="form-check-input me-2"
                   id="exampleCheck2"
+                  checked
                 />
-                <label class="form-check-label pfs-14" for="exampleCheck2"
+                <label class="form-check-label pfs-13" for="exampleCheck2"
                   >Autoplay previews while browsing on all devices.</label
                 >
               </div>
             </div>
           </div>
-
-          <div class="row d-flex justify-content-center">
-            <div class="col mx-0 px-0 pt-4">
-              <button class="btn btn-secondary me-3">SAVE</button>
-              <button class="btn btn-outline-secondary me-3">CANCEL</button>
-              <button class="btn btn-outline-secondary">DELETE PROFILE</button>
-            </div>
-          </div>
+        </div>
+      </div>
+      <!-- ROW 3-->
+      <div class="row">
+        <div class="col-12 pt-4 px-0 border-top">
+          <button class="btn btn-light me-3 px-4">SAVE</button>
+          <button class="btn btn-outline-secondary me-3 px-4">CANCEL</button>
+          <button class="btn btn-outline-secondary px-4">DELETE PROFILE</button>
         </div>
       </div>
     </div>
+
     <!-- MAIN SECTION END -->
 
     <script

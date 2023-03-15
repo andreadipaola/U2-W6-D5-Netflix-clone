@@ -14,7 +14,9 @@ $custom-colors: (
   "custom-white": $custom-white,
   "custom-lightgray": $gray-200,
   "custom-gray": $gray-500,
-  "custom-darkgray": $gray-600
+  "custom-darkgray": $gray-600,
+  "custom-darkestgray": $gray-700,
+  "custom-ultradarkgray": $gray-800
 );
 
 $body-color-dark: #eaeaea;
@@ -33,6 +35,11 @@ $carousel-control-hover-opacity: 1;
 $carousel-control-width: 5%;
 $carousel-dark-control-icon-filter: unset;
 
+$form-check-input-width: 2em;
+$form-check-input-focus-border: $gray-600;
+$form-check-input-checked-border-color: $gray-600;
+$form-check-input-focus-box-shadow: 0 0 0 0.25rem rgba($gray-600, 0.25);
+$form-check-input-checked-bg-color: $custom-transparent;
 
 $custom-spacers: (
   6: $spacer * 3.5,
@@ -42,7 +49,7 @@ $custom-spacers: (
   10: $spacer * 5.5,
   11: $spacer * 6,
   12: $spacer * 6.5,
-  13: $spacer * 7,
+  13: $spacer * 7
 );
 
 $h1-font-size: $font-size-base * 2;
@@ -54,11 +61,31 @@ $h3-font-size: $font-size-base * 1.25;
   $background,
   $border,
   $color: color-contrast($background),
-  $hover-background: if($color == $color-contrast-light, shade-color($background, $btn-hover-bg-shade-amount), tint-color($background, $btn-hover-bg-tint-amount)),
-  $hover-border: if($color == $color-contrast-light, shade-color($border, $btn-hover-border-shade-amount), tint-color($border, $btn-hover-border-tint-amount)),
+  $hover-background:
+    if(
+      $color == $color-contrast-light,
+      shade-color($background, $btn-hover-bg-shade-amount),
+      tint-color($background, $btn-hover-bg-tint-amount)
+    ),
+  $hover-border:
+    if(
+      $color == $color-contrast-light,
+      shade-color($border, $btn-hover-border-shade-amount),
+      tint-color($border, $btn-hover-border-tint-amount)
+    ),
   $hover-color: color-contrast($hover-background),
-  $active-background: if($color == $color-contrast-light, shade-color($background, $btn-active-bg-shade-amount), tint-color($background, $btn-active-bg-tint-amount)),
-  $active-border: if($color == $color-contrast-light, shade-color($border, $btn-active-border-shade-amount), tint-color($border, $btn-active-border-tint-amount)),
+  $active-background:
+    if(
+      $color == $color-contrast-light,
+      shade-color($background, $btn-active-bg-shade-amount),
+      tint-color($background, $btn-active-bg-tint-amount)
+    ),
+  $active-border:
+    if(
+      $color == $color-contrast-light,
+      shade-color($border, $btn-active-border-shade-amount),
+      tint-color($border, $btn-active-border-tint-amount)
+    ),
   $active-color: color-contrast($active-background),
   $disabled-background: $background,
   $disabled-border: $border,
@@ -118,9 +145,10 @@ $utilities: map-merge(
       values: (
         32: 32px,
         35: 35px,
-        40: 40px
-      ),
-    ),
+        40: 40px,
+        105: 105px
+      )
+    )
   )
 );
 
@@ -140,9 +168,11 @@ $utilities: map-merge(
         32: 32px,
         35: 35px,
         38: 38px,
-        40: 40px
-      ),
-    ),
+        40: 40px,
+        100: 100px,
+        105: 105px
+      )
+    )
   )
 );
 
@@ -160,9 +190,9 @@ $utilities: map-merge(
         16: 16px,
         18: 18px,
         22: 22px,
-        24: 24px      
-      ),
-    ),
+        24: 24px
+      )
+    )
   )
 );
 
@@ -188,9 +218,8 @@ $utilities: map-merge(
 .carousel-control-prev,
 .carousel-control-next {
   background-color: #000;
-  opacity: .5;
+  opacity: 0.5;
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
-

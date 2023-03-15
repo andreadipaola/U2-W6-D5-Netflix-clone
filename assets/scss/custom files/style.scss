@@ -2,21 +2,22 @@
 
 // INDEX.HTML
 #avatar-btn {
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: $custom-transparent;
   }
   &::after {
     vertical-align: 0;
-  } 
-}
-
-#footer {
-  color: $gray-600;
-  button {
-    color: $gray-600;
-    border-color: $gray-600;
   }
 }
+
+// #footer {
+//   color: $gray-600;
+//   button {
+//     color: $gray-600;
+//     border-color: $gray-600;
+//   }
+// }
 
 // PROFILE.HTML
 #profile-form {
