@@ -9,6 +9,9 @@ $custom-primary: #0073e6;
 $custom-white: #eaeaea;
 $custom-transparent: transparent;
 
+$body-color-dark: #eaeaea;
+$body-bg-dark: #141414;
+
 $custom-colors: (
   "custom-primary": $custom-primary,
   "custom-white": $custom-white,
@@ -16,14 +19,15 @@ $custom-colors: (
   "custom-gray": $gray-500,
   "custom-darkgray": $gray-600,
   "custom-darkestgray": $gray-700,
-  "custom-ultradarkgray": $gray-800
+  "custom-ultradarkgray": $gray-800,
+  "custom-dark": $body-bg-dark
 );
 
-$body-color-dark: #eaeaea;
-$body-bg-dark: #141414;
-
 $navbar-brand-font-size: 1rem;
-$navbar-brand-margin-end: 2.5rem;
+$navbar-brand-margin-end: 0.5rem;
+
+$navbar-dark-active-color: transparent;
+$navbar-toggler-focus-width: 0;
 
 $nav-link-font-size: 14px;
 
@@ -199,16 +203,21 @@ $utilities: map-merge(
   )
 );
 
-// $utilities: map-merge(
-//   $utilities,
-//   (
-//     "custom-vertical-align": (
-//       property: vertical-align,
-//       class: ve,
-//       values: 0
-//     ),
-//   )
-// );
+$utilities: map-merge(
+  $utilities,
+  (
+    "bg-opacity": (
+      css-var: true,
+      class: bg-opacity,
+      values: (
+        80: 0.8,
+        85: 0.85,
+        90: 0.9,
+        95: 0.95
+      )
+    )
+  )
+);
 
 @import "../bootstrap";
 
