@@ -11,6 +11,7 @@
   }
 }
 
+// PROFILE.HTML
 .pencil-container {
   display: inline-flex;
   align-items: center;
@@ -19,9 +20,89 @@
   height: 25px;
 }
 
-// PROFILE.HTML
 #profile-form {
   button:not(.dropdown-toggle) {
     letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  #column-second-element {
+    flex-direction: column;
+    div.col-3 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      span {
+        text-align: center;
+      }
+      button {
+        margin-bottom: 10px;
+      }
+    }
+    #column-payment-element {
+      div {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      a {
+        align-self: flex-end;
+      }
+    }
+  }
+  #column-third-element {
+    flex-direction: column;
+    div.col-3 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      div {
+        text-align: center;
+      }
+    }
+  }
+
+  #column-fourth-element {
+    flex-direction: column;
+    div.col-3 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      div {
+        text-align: center;
+      }
+    }
+    div.col {
+      div {
+        align-items: flex-end;
+      }
+    }
+  }
+
+  #column-fifth-element {
+    flex-direction: column;
+    div.col-3 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      div {
+        text-align: center;
+      }
+    }
+    div.row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      div.col-5 {
+        width: unset;
+      }
+      div.col {
+        width: unset;
+      }
+    }
+    #last-item {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }

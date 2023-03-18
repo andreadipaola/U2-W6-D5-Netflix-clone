@@ -15598,4 +15598,79 @@ textarea.form-control-lg {
 
 #profile-form button:not(.dropdown-toggle) {
   letter-spacing: 3px;
+}
+
+@media (max-width: 992px) {
+  #column-second-element {
+    flex-direction: column;
+  }
+  #column-second-element div.col-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #column-second-element div.col-3 span {
+    text-align: center;
+  }
+  #column-second-element div.col-3 button {
+    margin-bottom: 10px;
+  }
+  #column-second-element #column-payment-element div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #column-second-element #column-payment-element a {
+    align-self: flex-end;
+  }
+  #column-third-element {
+    flex-direction: column;
+  }
+  #column-third-element div.col-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #column-third-element div.col-3 div {
+    text-align: center;
+  }
+  #column-fourth-element {
+    flex-direction: column;
+  }
+  #column-fourth-element div.col-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #column-fourth-element div.col-3 div {
+    text-align: center;
+  }
+  #column-fourth-element div.col div {
+    align-items: flex-end;
+  }
+  #column-fifth-element {
+    flex-direction: column;
+  }
+  #column-fifth-element div.col-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #column-fifth-element div.col-3 div {
+    text-align: center;
+  }
+  #column-fifth-element div.row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #column-fifth-element div.row div.col-5 {
+    width: unset;
+  }
+  #column-fifth-element div.row div.col {
+    width: unset;
+  }
+  #column-fifth-element #last-item {
+    display: flex;
+    justify-content: flex-end;
+  }
 }/*# sourceMappingURL=style.css.map */
